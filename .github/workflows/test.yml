@@ -1,0 +1,46 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [ 3.7, 3.8, 3.9, 3.9.8, "3.10" ]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Set up Postgresql
+        uses: harmon758/postgresql-action@v1
+        with:
+          postgresql db: 'postgres'
+          postgresql user: 'postgres'
+          postgresql password: 'postgres'
+
+      - name: Set up MongoDB
+        uses: supercharge/mongodb-github-action@1.6.0
+
+      - name: Install dependencies
+        run: |
+          pip install -U poetry
+          poetry install -E all
+
+      - name: Unit tests
+        run: |
+          poetry run pytest tests    \
+                    --cov-report=xml \
+                    --ignore=tests/ext/test_async_sqlalchemy.py  \
+                    --ignore=tests/ext/test_sqlalchemy_future.py \
+                    --ignore=tests/ext/test_sqlmodel.py          \
+                    --ignore=tests/ext/test_async_sqlmodel.py
