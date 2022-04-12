@@ -1162,11 +1162,15 @@ python-versions = "*"
 
 [[package]]
 name = "typesystem"
-version = "0.2.5"
+version = "0.4.1"
 description = "A type system library for Python"
 category = "main"
 optional = true
 python-versions = ">=3.6"
+
+[package.extras]
+jinja2 = ["jinja2"]
+pyyaml = ["pyyaml"]
 
 [[package]]
 name = "typing-extensions"
@@ -1234,10 +1238,10 @@ docs = ["sphinx", "jaraco.packaging (>=8.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.0.1)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [extras]
-all = ["gino", "SQLAlchemy", "databases", "orm", "ormar", "tortoise-orm", "asyncpg", "Django", "piccolo", "motor", "mongoengine"]
+all = ["gino", "SQLAlchemy", "databases", "orm", "ormar", "tortoise-orm", "asyncpg", "django", "piccolo", "motor", "mongoengine"]
 asyncpg = ["SQLAlchemy", "asyncpg"]
 databases = ["databases"]
-django = ["Django", "databases"]
+django = ["django", "databases"]
 gino = ["gino", "SQLAlchemy"]
 mongoengine = ["mongoengine"]
 motor = ["motor"]
@@ -1250,7 +1254,7 @@ tortoise = ["tortoise-orm"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "b316d450dc9807b56a6171c3a229b970d9c8ddd4bc6beabc72d0052a86cf86ab"
+content-hash = "d159dbb21d552863b6e89491eee1252e8959f9416bae765de05aa9094d30cf20"
 
 [metadata.files]
 aiomysql = [
@@ -2151,8 +2155,8 @@ typed-ast = [
     {file = "typed_ast-1.4.3.tar.gz", hash = "sha256:fb1bbeac803adea29cedd70781399c99138358c26d05fcbd23c13016b7f5ec65"},
 ]
 typesystem = [
-    {file = "typesystem-0.2.5-py3-none-any.whl", hash = "sha256:08f0b2f284be7ea801dd7f2dafc711bb945e4ae33c2dd926816c40e13f303c2f"},
-    {file = "typesystem-0.2.5.tar.gz", hash = "sha256:12a727df6d06bced9cad60e171de4c56bbfc31c02b7c340e45656fb6e9c3db84"},
+    {file = "typesystem-0.4.1-py3-none-any.whl", hash = "sha256:26b2368d00fc981fbe7aef85ea1f44f90132e10a33b2f0ea3f3b5774774fee8d"},
+    {file = "typesystem-0.4.1.tar.gz", hash = "sha256:cc3f03d101fadbb60356993ce600fdfbf4bbce90ce5cb444766962be33f53ce1"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
