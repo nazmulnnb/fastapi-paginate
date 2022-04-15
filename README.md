@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-lightgrey)](/LICENSE)
 [![codecov](https://github.com/nazmulnnb/fastapi-paginate/workflows/Test/badge.svg)](https://github.com/nazmulnnb/fastapi-paginate/actions)
 [![PYPI](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PYPI](https://img.shields.io/pypi/v/fastapi-paginate)](https://pypi.org/project/fastapi-paginate/)
 
 
 fastapi-paginate is an extended work of fastapi-pagination. 
@@ -67,6 +68,44 @@ users = [
 @app.get('/users', response_model=Page[User])
 async def get_users():
     return paginate(users)
+
+
+add_pagination(app)
+```
+
+## sqlalchemy example
+```python
+from fastapi import FastAPI, Depends
+from pydantic import BaseModel
+
+from fastapi_paginate import Page, add_pagination
+from fastapi_paginate.ext.sqlalchemy import paginate
+
+from sqlalchemy.orm import Session
+
+app = FastAPI()
+
+class UserModel(Base):
+    name = Column(String)
+    surname = Column(String)
+    age = Column(Integer)
+
+class User(BaseModel):
+    name: str
+    surname: str
+    age: int
+
+@app.get('/users', response_model=Page[User])
+async def get_users(db_session: Session = Depends(get_db_session)):
+    stmt = db_session.query(UserModel)
+    
+    # add filters 
+    stmt = stmt.filter(UserModel.age < 30)
+    
+    # sort
+    stmt = stmt.order_by(asc(UserModel.age))
+    
+    return paginate(stmt)
 
 
 add_pagination(app)
