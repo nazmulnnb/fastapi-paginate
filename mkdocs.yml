@@ -1,7 +1,7 @@
-site_name: FastAPI Pagination
-site_author: Yurii Karabas
+site_name: FastAPI Paginate
+site_author: Nazmul Hasan
 site_description: FastAPI Pagination
-copyright: "Copyright &copy; 2021 Yurii Karabas"
+copyright: "Copyright &copy; 2022 Nazmul Hasan"
 repo_url: https://github.com/nazmulnnb/fastapi-paginate
 repo_name: nazmulnnb/fastapi-paginate
 
@@ -19,7 +19,6 @@ nav:
   - "Home": index.md
   - "Tutorials":
       - "First Steps": first-steps.md
-      - "Limit-Offset": limit-offset.md
       - "Customization": customization.md
       - "Advanced": advanced.md
 
@@ -38,8 +37,4 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/uriyyo/fastapi-pagination
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/uriyyo
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/yurii-karabas-b35653140
+      link: https://github.com/nazmulnnb/fastapi-paginate

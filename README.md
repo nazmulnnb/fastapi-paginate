@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-MIT-lightgrey)](/LICENSE)
 [![codecov](https://github.com/nazmulnnb/fastapi-paginate/workflows/Test/badge.svg)](https://github.com/nazmulnnb/fastapi-paginate/actions)
 [![PYPI](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PYPI](https://img.shields.io/pypi/v/fastapi-pagination)](https://pypi.org/project/fastapi-paginate/)
 
 ## Installation
 
