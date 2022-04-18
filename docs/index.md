@@ -8,7 +8,7 @@ Example of code and generated OpenAPI specification.
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from fastapi_pagination import Page, add_pagination, paginate
+from fastapi_paginate import Page, add_pagination, paginate
 
 app = FastAPI()
 

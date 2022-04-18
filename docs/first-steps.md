@@ -9,7 +9,7 @@ functions from `fastapi_paginate`.
 
 
 ```python
-from fastapi_pagination import Page, paginate, add_pagination
+from fastapi_paginate import Page, paginate, add_pagination
 from fastapi import FastAPI
 from pydantic import BaseModel
 
