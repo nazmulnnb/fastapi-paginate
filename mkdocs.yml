@@ -1,10 +1,9 @@
 site_name: FastAPI Paginate
 site_author: Nazmul Hasan
-site_description: FastAPI pagination with next, prev, first, last links while keeping the request params.
+site_description: FastAPI pagination with next, prev, first, last links while keeping the request params
 copyright: "Copyright &copy; 2022 Nazmul Hasan"
 repo_url: https://github.com/nazmulnnb/fastapi-paginate
 repo_name: nazmulnnb/fastapi-paginate
-google-site-verification: KlfEUhMff2gprkewxvAO6cIkwnS-2ZmRxSkzbEQU3sI
 
 theme:
   name: material
