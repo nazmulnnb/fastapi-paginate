@@ -1,6 +1,5 @@
 mkdocs==1.1.2
 mkdocs-material==6.2.2
-pymdown-extensions==8.1
 fontawesome-markdown==0.2.6
 jinja2<3.1.0
 markdown2==2.4.3
