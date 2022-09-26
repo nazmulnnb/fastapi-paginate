@@ -36,6 +36,9 @@ markdown_extensions:
   - pymdownx.inlinehilite
 
 extra:
+  analytics:
+    provider: google
+    property: G-67WK66T0V0
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/nazmulnnb/fastapi-paginate
