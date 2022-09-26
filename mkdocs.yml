@@ -1,6 +1,7 @@
 site_name: FastAPI Paginate
 site_author: Nazmul Hasan
 site_description: FastAPI Pagination
+site_url: https://fastapi-paginate.netlify.app
 copyright: "Copyright &copy; 2022 Nazmul Hasan"
 repo_url: https://github.com/nazmulnnb/fastapi-paginate
 repo_name: nazmulnnb/fastapi-paginate
